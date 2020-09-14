@@ -1,31 +1,22 @@
 #    Project #1: 4386 Compiler Design
 ##   Lexical Analyzer
-##  Stuart Small: sjs160530
-##  Fall 2020
 
-How to run:< /br>
+######How to run:
 'make run'
 
-How to reset:< /br>
+######How to reset:
 'make clean'
 
 Program         →   class id { Memberdecls }<br />
 Memberdecls     →   Fielddecls Methoddecls<br />
-Fielddecls      →   Fielddecl Fielddecls<br /> 
-| λ <br />
-Methoddecls     →   Methoddecl Methoddecls <br />
-| λ <br />
-Fielddecl       →   Optionalfinal Type id Optionalexpr ;<br />
-|   Type id [ intlit ];<br />
-Optionalfinal   →   final <br />
-| λ<br />
-Optionalexpr    →   = Expr <br />
-| λ<br />
+Fielddecls      →   Fielddecl Fielddecls| λ <br />
+Methoddecls     →   Methoddecl Methoddecls | λ <br />
+Fielddecl       →   Optionalfinal Type id Optionalexpr |   Type id [ intlit ];<br />
+Optionalfinal   →   final | λ<br />
+Optionalexpr    →   = Expr | λ<br />
 Methoddecl      →   Returntype id ( Argdecls ) { Fielddecls Stmts } Optionalsemi<br />
-Optionalsemi    →   ; 
-| λ<br />
-Returntype      →   Type 
-| void<br />
+Optionalsemi    →   ; | λ<br />
+Returntype      →   Type | void<br />
 Type            →   int | char | bool | float<br />
 Argdecls        →   ArgdeclList | λ<br />
 ArgdeclList     →   Argdecl , ArgdeclList | Argdecl<br />
