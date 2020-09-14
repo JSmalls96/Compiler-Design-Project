@@ -1,33 +1,31 @@
 #    Project #1: 4386 Compiler Design
 ##   Lexical Analyzer
-###  Stuart Small: sjs160530
-###  Fall 2020
+##  Stuart Small: sjs160530
+##  Fall 2020
 
-How to run:
-**make run**
+How to run:< /br>
+'make run'
 
-How to reset:
-**make clean**
-
-##### Add Testcases:
-
-Add test files to  CP/tests dir,
-Add statements to makefile with format:<br />
-    $(JAVA)	-cp	$(CP)	LexerTest	./tests/FIELNAME.txt	>	./tests/output/FIELNAME-output.txt<br />
-	cat	-n	./tests/output/FIELNAME-output.txt<br />
-
+How to reset:< /br>
+'make clean'
 
 Program         →   class id { Memberdecls }<br />
-Memberdecls     →   Fielddecls Methoddecls <br />
-Fielddecls      →   Fielddecl Fielddecls | λ <br />
-Methoddecls     →   Methoddecl Methoddecls | λ <br />
+Memberdecls     →   Fielddecls Methoddecls<br />
+Fielddecls      →   Fielddecl Fielddecls<br /> 
+| λ <br />
+Methoddecls     →   Methoddecl Methoddecls <br />
+| λ <br />
 Fielddecl       →   Optionalfinal Type id Optionalexpr ;<br />
-                |   Type id [ intlit ];<br />
-Optionalfinal   →   final | λ<br />
-Optionalexpr    →   = Expr | λ<br />
+|   Type id [ intlit ];<br />
+Optionalfinal   →   final <br />
+| λ<br />
+Optionalexpr    →   = Expr <br />
+| λ<br />
 Methoddecl      →   Returntype id ( Argdecls ) { Fielddecls Stmts } Optionalsemi<br />
-Optionalsemi    →   ; | λ<br />
-Returntype      →   Type | void<br />
+Optionalsemi    →   ; 
+| λ<br />
+Returntype      →   Type 
+| void<br />
 Type            →   int | char | bool | float<br />
 Argdecls        →   ArgdeclList | λ<br />
 ArgdeclList     →   Argdecl , ArgdeclList | Argdecl<br />
