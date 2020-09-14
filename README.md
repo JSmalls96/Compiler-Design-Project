@@ -4,18 +4,18 @@
 ###  Fall 2020
 
 How to run:
-'''make run'''
+**make run**
 
 How to reset:
-'''make clean'''
+**make clean**
 
 ##### Add Testcases:
-'''
+
 Add test files to  CP/tests dir,
-Add statements to makefile with format:
-    $(JAVA)	-cp	$(CP)	LexerTest	./tests/FIELNAME.txt	>	./tests/output/FIELNAME-output.txt
-	cat	-n	./tests/output/FIELNAME-output.txt
-'''
+Add statements to makefile with format:<br />
+    $(JAVA)	-cp	$(CP)	LexerTest	./tests/FIELNAME.txt	>	./tests/output/FIELNAME-output.txt<br />
+	cat	-n	./tests/output/FIELNAME-output.txt<br />
+
 
 Program         →   class id { Memberdecls }<br />
 Memberdecls     →   Fielddecls Methoddecls <br />
